@@ -1,0 +1,140 @@
+
+
+<section class="w-[70%] my-8 shadow bg-[#e9ecef] mx-auto rounded p-5">
+    <div class="container py-10 mb-5">
+        <h1 class=" font-bold text-center text-[#090F41] text-[23px] ">Details Custom Order</h1>
+               
+
+
+        <form class=""   [formGroup]="checkoutForm" (ngSubmit)="PaymentOnline()">
+            <div class="mb-6">
+                <label for="details" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">    User details</label>
+                <input
+                formControldetails="details"
+                type="text" id="details" class="bg-gray-50 border
+                 border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-[#9B7E5C]
+                 focus:border-[#9B7E5C] block w-full p-2.5 dark:bg-gray-700 dark:border-[#9B7E5C]dark:text-white dark:focus:ring-[#9B7E5C]
+"
+                >
+
+                @let conteoldetails=checkoutForm.get('details');
+                @if(conteoldetails?.errors && conteoldetails?.touched )
+                {
+                    <div class="flex p-2 mt-4 text-sm text-white rounded-lg bg-[#8B5E35] " role="alert">
+                        <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                        </svg>
+                        <span class="sr-only">Danger</span>
+                        <div>
+                          
+                            <ul class="mt-1.5 list-disc list-inside">
+                              @if(conteoldetails?.getError('required'))
+                              {
+                                <li>details is required</li>
+                              }
+                             
+                              
+                          </ul>
+                        </div>
+                      </div>
+                }
+            </div>
+
+
+            <div class="mb-6">
+                <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+                <input
+                formControlName="city"
+                type="text" id="city" class="bg-gray-50 border
+                 border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-[#9B7E5C]
+                 focus:border-[#9B7E5C] block w-full p-2.5 dark:bg-gray-700 dark:border-[#9B7E5C]dark:text-white dark:focus:ring-[#9B7E5C]
+"
+                >
+
+               @let controlcity=checkoutForm.get('city');
+                @if(controlcity?.errors  && controlcity?.touched)
+                {
+                    <div class="flex p-2 mt-4 text-sm text-white rounded-lg bg-[#8B5E35] " role="alert">
+                        <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                        </svg>
+                        <span class="sr-only">Danger</span>
+                        <div>
+                          
+                            <ul class="mt-1.5 list-disc list-inside">
+                              @if(controlcity?.getError('required'))
+                              {
+                                <li>city is required</li>
+                              }
+                             
+                              
+                              
+                              
+                             
+                              
+                          </ul>
+                        </div>
+                      </div>
+                }
+            </div>
+
+
+            <div class="mb-6">
+                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">  Phone</label>
+                <input 
+                formControlName="phone"
+                type="tel" id="phone" class="bg-gray-50 border
+                 border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-[#9B7E5C]
+                 focus:border-[#9B7E5C] block w-full p-2.5 dark:bg-gray-700 dark:border-[#9B7E5C]dark:text-white dark:focus:ring-[#9B7E5C]
+"
+                >
+                @let controlPhone=checkoutForm.get('phone');
+                @if(controlPhone?.errors  && controlPhone?.touched)
+                {
+                    <div class="flex p-2 mt-4 text-sm text-white rounded-lg bg-[#8B5E35] " role="alert">
+                        <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                        </svg>
+                        <span class="sr-only">Danger</span>
+                        <div>
+                          
+                            <ul class="mt-1.5 list-disc list-inside">
+                              @if(controlPhone?.getError('required'))
+                              {
+                                <li>phone is required</li>
+                              }
+                              @else if(controlPhone?.getError('pattern'))
+                              {
+                                <li>phone is valid</li>
+                              }
+                              
+                              
+                             
+                              
+                          </ul>
+                        </div>
+                      </div>
+                }
+            </div>
+
+
+            <button class="bg-[#8B5E35] px-10 rounded-full  py-2 text-white"  type="submit">
+                 Online  Payment <img src="/images/visa.png" class="w-[30px] inline-flex" alt="">
+              
+              @if( isLoading)
+              {
+                <span><i class=" fas fa-spin fa-spinner"></i></span>
+              }
+            </button>
+            
+          
+            
+           
+          
+            
+            
+        </form>
+    </div>
+
+    
+</section>

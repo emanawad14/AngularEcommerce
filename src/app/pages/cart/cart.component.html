@@ -1,0 +1,99 @@
+
+@if (CartDetails.totalCartPrice) 
+{
+
+
+    <section class="py-10">
+        <div class=" py-5 shadow   border-[#090F41] border-2 rounded-lg p-6 ">
+            <h1 class=" font-bold text-center  text-[30px] text-[#090F41]">Shop Cart</h1>
+            <ul class="flex justify-start items-center py-5">
+                <li>
+                    <a routerLink="/home" routerLinkActive="text-[#8B5E35]"  class="block text-[#8B5E35] font-bold   py-2 px-3 ms-4  text-[14px]  " aria-current="page"> women 
+                        </a>
+                  </li>
+                  <i class="fa-solid fa-chevron-right"></i>
+    
+                  <li>
+                    <a routerLink="/blog" routerLinkActive="text-[#8B5E35]"  class="block  text-[#9D9DAA] py-2 px-3  text-[14px] ms-4  " aria-current="page"> men 
+                        </a>
+                  </li>
+                <li>
+                    <a routerLink="/home" routerLinkActive="text-[#8B5E35]"  class="block text-[#8B5E35] font-bold   py-2 px-3 ms-4  text-[14px]  " aria-current="page"> sports 
+                        </a>
+                  </li>
+                  <i class="fa-solid fa-chevron-right"></i>
+    
+                  <li>
+                    <a routerLink="/blog" routerLinkActive="text-[#8B5E35]"  class="block  text-[#9D9DAA] py-2 px-3  text-[14px] ms-4  " aria-current="page"> girl 
+                        </a>
+                  </li>
+            </ul>
+        
+     <br>
+    
+    
+     <div class="flex justify-between items-center">
+        <h1 class="text-[#090F41] font-bold  shadow p-3 rounded-full"><span>Total Cart:</span> ${{CartDetails.totalCartPrice}} </h1>
+        <button (click)="ClearItemss()" class="bg-red-900 text-white py-1 px-6 rounded-full">Clear Cart</button>
+     </div>
+    
+           
+     @for (item of CartDetails.products; track item.product.id) 
+     {
+    
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 py-10 text-center border-b gap-3">
+    
+            <div>
+                <img [src]="item.product.imageCover" class="w-1/2 rounded" alt="">
+    
+            </div>
+            <div>
+                <h1 class="text-[#8B5E35] font-bold text-[25px] mb-5">{{item.product.title.split(' ',2).join(' ')}}</h1>
+                <div class="flex justify-start mb-5 items-center">
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star-half-stroke text-yellow-400"></i></p>
+                    <p class="ms-10 text-[#9D9DAA]">42 ..reviews</p>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="text-[#090F41] font-bold mb-5 text-[30px]"> ${{item.price}} </h1>
+            </div>
+
+            <div class="flex justify-start  items-center gap-6">
+                <button (click)="UpDateDate(item.product.id ,item.count + 1)" class="text-4xl text-[#9D9DAA]"><span><i class="fa-regular fa-square-plus"></i></span></button>
+                  <span class="text-[#090F41] font-bold"> {{item.count}} </span>
+                <button  (click)="UpDateDate(item.product.id ,item.count - 1)"  class="text-4xl text-[#9D9DAA]"><span><i class="fa-regular fa-square-minus"></i></span></button>
+            </div>
+
+            <div>
+                <button (click)="DeleteCaryItem(item.product.id)" class="text-3xl text-[#8B5E35] "><i class="fa-solid fa-trash"></i></button>
+                
+            </div>
+    
+        </div>
+    
+     }
+    
+      <button  [routerLink]="['/checkout',CartDetails._id]" class="bg-[#8B5E35] text-white px-14 py-2 rounded-full mt-4">Proceed To CheckOut
+       @if (isLoading) {
+        <span><i class="fas fa-spin fa-spinner"></i></span>
+       }
+      </button>
+        </div>
+    
+    
+    
+    </section>
+}
+@else {
+   
+    <div class="flex justify-center items-center gap-6 py-6">
+        <img class="w-1/4" src="/images/black-friday-notepad-mock-up-sale-concept.jpg" alt="">
+        <h1 class="text-3xl text-red-700 font-bold">No Data Found Check The Product Friday
+            <br> On Sale 
+        </h1>
+    </div>
+}

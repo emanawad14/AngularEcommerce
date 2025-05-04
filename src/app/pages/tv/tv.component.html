@@ -1,0 +1,48 @@
+
+
+<section class="py-7">
+    <div class="container">
+        <h2 class="text-[#090F41] text-center font-bold text-[22px] mb-7">Impact of Television.</h2>
+
+        <p class="text-[#9D9DAA] mb-10 text-[14px]">elevision (TV) is one of the most influential forms of media, providing entertainment, news, and educational content to people worldwide. Since its invention, TV has evolved significantly, from black-and-white screens to high-definition and smart TVs connected to the internet.</p>
+      <div class="grid sm:grid-cols-2 md:grid lg:grid-cols-4 gap-10">
+        @for (item of tv; track $index)
+   {
+
+
+    <div class="max-w-sm bg-[#090F41] border border-gray-200 rounded-lg shadow-sm  dark:border-gray-700">
+        <a href="#">
+            <img class="rounded h-[300px]" [src]="item.image" alt="" />
+        </a>
+        <div class=" flex justify-between items-center">
+
+           
+                <h5 class="mt-5  ms-2 text-sm font-bold tracking-tight text-white "> {{item.brand}} </h5>
+                <h5 class="mt-5 me-2 text-sm font-bold tracking-tight text-white "> {{item.price}} </h5>
+
+            
+        </div>
+
+        <div class="flex justify-between items-center">
+            <p class="mt-5 ms-2 font-normal text-[#9B7E5C]">  {{item.onSale}}</p>
+            <p class="mt-5 me-2 text-sm font-bold tracking-tight text-white ">  {{item.model}}</p>
+        </div>
+      </div>
+    
+   }
+
+          
+        
+  
+  
+      </div>
+  
+  
+  
+  
+    </div>
+    
+      
+   
+  </section>
+

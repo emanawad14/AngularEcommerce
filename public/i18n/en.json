@@ -1,0 +1,45 @@
+{
+
+    "navbar":{
+        "home":"Home",
+        "services":"Services",
+        "about":"About",
+        "products":"Products",
+        "blog":"Blog",
+        "contactus":"Contact Us",
+        "trendify":"Trendify",
+        "login":"Log In",
+        "register":"Register"
+
+    },
+   
+    "register":{
+        "create_a_account":"Create A Account",
+    "create_a_new_account":"Create a new account",
+    "userpassword":"User Password",
+    "e-mail":"E-mail",
+    "repassword":" RePassword",
+    "password":"Password",
+    "phone":"Phone",
+    "signup":"Sign Up"
+
+    },
+    "login":{
+        "welcomeback!":"Welcome Back!",
+    "please_login_or_sign_up_to_contain_our_opp":"Please login or Sign up to contain our opp",
+    "email":"E-mail",
+    "password":"Password",
+    "login":"Login",
+    "ForgetPassword?":"ForgetPassword ?",
+    "remember_me":"Remember me",
+    "or_contain_with":"or contain with",
+    "Don't_have_an_account?_sign_up?":"Don't have an account? sign up?"
+
+    }
+    
+    
+    
+    
+    
+
+}

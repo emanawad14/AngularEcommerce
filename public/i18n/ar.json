@@ -1,0 +1,34 @@
+{
+    "navbar": {
+        "home": "الرئيسية",
+        "services": "الخدمات",
+        "about": "من نحن",
+        "products": "المنتجات",
+        "blog": "المدونة",
+        "contactus": "اتصل بنا",
+        "trendify": "تريندي فاي",
+        "login": "تسجيل الدخول",
+        "register": "إنشاء حساب"
+    },
+    "register": {
+        "create_a_account": "إنشاء حساب",
+        "create_a_new_account": "إنشاء حساب جديد",
+        "userpassword": "كلمة مرور المستخدم",
+        "e-mail": "البريد الإلكتروني",
+        "repassword": "إعادة إدخال كلمة المرور",
+        "password": "كلمة المرور",
+        "phone": "رقم الهاتف",
+        "signup": "التسجيل"
+    },
+    "login": {
+        "welcomeback!": "مرحبًا بعودتك!",
+        "please_login_or_sign_up_to_contain_our_opp": "يرجى تسجيل الدخول أو إنشاء حساب للوصول إلى فرصنا",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "login": "تسجيل الدخول",
+        "ForgetPassword?": "هل نسيت كلمة المرور؟",
+        "remember_me": "تذكرني",
+        "or_contain_with": "أو قم بالتسجيل عبر",
+        "Don't_have_an_account?_sign_up?": "ليس لديك حساب؟ سجل الآن"
+    }
+}

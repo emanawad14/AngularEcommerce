@@ -1,0 +1,69 @@
+<section class="py-10">
+  
+    <div class="container">
+        <h1 class="text-[#090F41] font-bold text-[35px] py-6 text-center ">Product Details</h1>
+        <div class="grid lg:grid-cols-2 gap-5">
+
+         
+            
+            <div class="">
+                <img [src]='imgsSrc' class="w-1/2 rounded py-3" alt="">
+               
+               
+                
+                    <owl-carousel-o [options]="customOptions">
+                        <!-- <div class="grid lg:grid-cols-4"> -->
+                        
+                     @for ( cat of IDProducts.images; track $index)
+                      {
+   
+                        <ng-template carouselSlide>
+                            <img (click)="imgScreen(cat)" [src]="cat" class="w-full gap-3 rounded-3xl" alt="">
+                          
+                          
+                          </ng-template>
+             
+                    }
+                <!-- </div> -->
+                </owl-carousel-o>
+                  
+              
+            </div>
+            <div>
+               <h2 class="text-[#8B5E35] font-bold mb-5 text-[30px]">{{IDProducts.title}}</h2>
+               <div class="flex justify-start mb-5 items-center ">
+                <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                <p><i class="fa-solid fa-star-half-stroke text-yellow-400"></i></p>
+                <p class="ms-10 text-[#9D9DAA]">42 ..reviews</p>
+            </div>
+               <h2 class="font-bold mb-5 text-[25px] text-[#372413]">${{IDProducts.price}}</h2>
+               <h2 class="font-light mb-5 text-[15px] text-[#9D9DAA]">{{IDProducts.description}}</h2>
+               <h2  class="text-[#090F41] font-bold text-[20px] py-6  mb-5">{{IDProducts.brand.name}}</h2>
+               <h2  class="text-[#8B5E35] font-bold mb-5 text-[20px]">{{IDProducts.category.name}}</h2>
+            </div>
+    
+        </div>
+    </div>
+
+</section>
+
+<!-- <owl-carousel-o [options]="customOptions">
+    
+            
+             
+    @for (cat of IDProducts.images; track $index) 
+    {
+        <ng-template carouselSlide>
+            <img [src]="cat" class="w-full rounded-3xl" alt="">
+          
+          
+          </ng-template>
+    }
+
+
+  </owl-carousel-o>
+<div class="flex items-center mt-9"> -->
+
+

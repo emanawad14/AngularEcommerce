@@ -1,0 +1,87 @@
+
+
+<section class="py-10">
+        <div class=" py-5 shadow  border-[#090F41] border-2 rounded-lg p-6 ">
+            <h1 class=" font-bold text-center  text-[30px] text-[#090F41]">WishList <i class="fa fa-heart text-[#8B5E35]"></i></h1>
+            <ul class="flex justify-start items-center py-5">
+                <li>
+                    <a routerLink="/home" routerLinkActive="text-[#8B5E35]"  class="block text-[#8B5E35] font-bold   py-2 px-3 ms-4  text-[14px]  " aria-current="page"> women 
+                        </a>
+                  </li>
+                  <i class="fa-solid fa-chevron-right"></i>
+    
+                  <li>
+                    <a routerLink="/blog" routerLinkActive="text-[#8B5E35]"  class="block  text-[#9D9DAA] py-2 px-3  text-[14px] ms-4  " aria-current="page"> men 
+                        </a>
+                  </li>
+                <li>
+                    <a routerLink="/home" routerLinkActive="text-[#8B5E35]"  class="block text-[#8B5E35] font-bold   py-2 px-3 ms-4  text-[14px]  " aria-current="page"> sports 
+                        </a>
+                  </li>
+                  <i class="fa-solid fa-chevron-right"></i>
+    
+                  <li>
+                    <a routerLink="/blog" routerLinkActive="text-[#8B5E35]"  class="block  text-[#9D9DAA] py-2 px-3  text-[14px] ms-4  " aria-current="page"> girl 
+                        </a>
+                  </li>
+            </ul>
+        
+     <br>
+    
+    
+     <div class="flex justify-between items-center">
+
+        
+     </div>
+    
+           
+   
+     
+    
+        
+     @for (item of iwishList; track item.id) 
+     {
+        <div class="grid md:grid-cols-2 lg:grid-cols-4  text-center py-10 border-b gap-8">
+    
+            <div>
+                <img [src]="item.imageCover" class="w-1/2 rounded" alt="">
+    
+            </div>
+            <div>
+                <h1 class="text-[#8B5E35] font-bold text-[25px] mb-5 text-start">{{item.title.split(' ',3).join(' ')}}</h1>
+                <div class="flex justify-start mb-5 items-center">
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star text-yellow-400"></i></p>
+                    <p><i class="fa-solid fa-star-half-stroke text-yellow-400"></i></p>
+                    <p class=" text-start text-[#9D9DAA]">42 ..reviews</p>
+                </div>
+    
+              
+                
+                
+            </div>
+            <div>
+                <h1 class="text-[#090F41] font-bold mb-5 text-[30px]"> ${{item.price}} </h1>
+    
+               
+                
+                
+                
+            </div>
+            <div>
+                <button (click)="removeWishList(item.id)"  class="text-3xl text-[#8B5E35] "><i class="fa-solid fa-trash"></i></button>
+            </div>
+    
+        </div>
+    
+     }
+    
+    
+      
+     
+        </div>
+    
+    
+    
+    </section>

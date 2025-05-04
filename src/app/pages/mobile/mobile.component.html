@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+
+       <section class="py-7">
+        <div class="container">
+            <h2 class="text-[#090F41] text-center font-bold text-[22px] mb-7">Mobile Phones and Modern Life.</h2>
+
+            <p class="text-[#9D9DAA] mb-10 text-[14px]">Mobile phones have become an essential part of daily life, transforming how people communicate, work, and entertain themselves. With advancements in technology, modern smartphones are no longer just for calls and messages; they serve as mini-computers with powerful features</p>
+          <div class="grid sm:grid-cols-2 md:grid lg:grid-cols-4 gap-10">
+            @for (item of mobile; track $index)
+       {
+
+
+        <div class="max-w-sm bg-[#2E2E2E] border border-gray-200 rounded-lg shadow-sm  dark:border-gray-700">
+            <a href="#">
+                <img class="rounded h-[200px]" [src]="item.image" alt="" />
+            </a>
+            <div class=" flex justify-between items-center">
+
+               
+                    <h5 class="mt-5  ms-2 text-sm font-bold tracking-tight text-white "> {{item.brand}} </h5>
+                    <h5 class="mt-5 me-2 text-sm font-bold tracking-tight text-white "> {{item.price}} </h5>
+
+                
+            </div>
+
+            <div class="flex justify-between items-center">
+                <p class="mt-5 ms-2 font-normal text-[#9B7E5C]">  {{item.onSale}}</p>
+                <p class="mt-5 me-2 text-sm font-bold tracking-tight text-white ">  {{item.model.split(' ',2).join(' ')}}</p>
+            </div>
+          </div>
+        
+       }
+    
+              
+            
+      
+      
+          </div>
+      
+      
+      
+      
+        </div>
+        
+          
+       
+      </section>
+

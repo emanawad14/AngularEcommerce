@@ -1,0 +1,151 @@
+<section class=" py-5  mb-3 ms-0" >
+    
+  <div class="text-center main w-[100%] bg-[#5AC8E1] ">
+      <h1 class="text-white py-10 text-[40px] font-bold">Discover Fashion That Speaks To You.</h1>
+      <p class="text-white  text-[20px] font-bold">Explore a range of high-quality, affordable furniture designed to transform any room. Discover the <br>
+           perfect blend of style, comfort, and functionality for your space.</p>
+           <button class="border border-white text-white py-2 px-8 mt-5 rounded-full">See more</button>
+     
+  
+  </div>
+  </section>
+<br>
+<section>
+  <p class="mb-1 text-[#9B7E5C] text-center font-bold">Top Products</p>
+  <h1 class="text-center text-[30px] font-bold text-[#090F41] py-3"> Top Picks For You !""  </h1>
+  <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      @for (cat of Categories; track cat._id) 
+      {
+          <div  data-aos="flip-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="w-full max-w-sm bg-white border border-gray-200 rounded shadow-sm dark:bg-gray-800 dark:border-gray-700">
+              <a  class="relative">
+                  <img [routerLink]="['/category' ,cat._id ]" class="h-[250px] object-contain w-full rounded-t-lg" [src]="cat.image" alt="product image" />
+                  <span><i class="fa-regular fa-heart absolute top-2 left-2 text-[#9B7E5C] text-[14px]"></i></span>
+              </a>
+
+              <div class=" ">
+
+                <h5 class="text-sm mb-1 ms-2 text-[#090F41] font-bold  dark:text-white">{{cat.name.split(' ',2).join(' ')}}</h5>
+                  
+              </div>
+              <div class=" ">
+                  <div class=" flex  items-center justify-between" >
+                    <span class=" px-3 py-1  mb-1 text-[#090F41] font-bold"><i class="fas fa-star text-yellow-500"></i> 4.8 <span class="text-gray-300 text-[12px]">(500+)</span> </span>
+                  </div>
+
+
+                  <div class="flex items-center justify-between">
+
+                      <span class="bg-yellow-100 ms-2 text-yellow-800 text-xs font-bold me-2 px-3 py-1 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">{{cat.createdAt|date}}</span>
+                      <span  class="  text-3xl text-[#8B5E35] mb-3 me-2 dark:text-white"><i class="fa-solid fa-cart-plus"></i></span>
+                      
+                  </div>
+
+                
+                  
+              </div>
+          </div>
+
+
+
+      }
+
+  </div>
+</section>
+
+
+<section class="py-10">
+  
+  <h1 class="text-center text-[30px] font-bold text-[#9B7E5C] py-3"> Sub Of Category  </h1>
+  <div class="grid md:grid-cols-4 lg:grid-cols-6 gap-8">
+
+      @for (cat of subCategorirs; track cat._id) 
+      {
+          <div  class="w-full max-w-sm py-3 bg-white border border-gray-200 rounded shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            
+            
+              <div class=" ">
+
+                <h5 class="text-sm p-3 text-center mb-1 ms-2 text-[#090F41] font-bold  dark:text-white">{{cat.name.split(' ',2).join(' ')}}</h5>
+                  
+              </div>
+           
+              
+          </div>
+
+
+
+      }
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<br>
+<section class="bg-[#F6F6F6]">
+    <div class="container">
+        <h1 class="text-[#8B5E35] text-center italic">Services</h1>
+        <h2 class="text-[22px] font-bold text-[#090F41] text-center">Benefits when using <br>Our Services.</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 py-10 gap-10" >
+            <div class="shadow bg-white rounded p-8"
+            data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+              <span class="mb-4 text-3xl text-[#8B5E35]"><i class="fa-solid fa-lightbulb"></i></span>
+                <h2 class="  text-[#090F41] text-[22px] font-semibold mb-4">Inspiration</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada dignissim</p>
+
+            </div>
+            <div      data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="shadow bg-white rounded p-8" >
+              <span class="mb-4 text-3xl text-[#8B5E35]"><i class="fa-solid fa-headphones"></i></span>
+                <h2 class="text-[#090F41] text-[20px] font-semibold mb-4">24/7 Customer Serv</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada dignissim</p>
+
+            </div>
+            <div     data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="shadow bg-white rounded p-8">
+              <span class="mb-4 text-3xl text-[#8B5E35] bg-[#F6F6F6] rounded-[50%]"><i class="fa-solid fa-truck-fast"></i></span>
+                <h2 class="text-[#090F41] text-[20px] font-semibold mb-4">Express Shopping</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada  dignissim</p>
+
+            </div>
+            <div     data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="shadow bg-white rounded p-8">
+              <span class="mb-4 text-3xl text-[#8B5E35]"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                <h2 class="text-[#090F41] text-[22px] font-semibold mb-4">Holding Heart</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada  dignissim</p>
+
+            </div>
+            <div    data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="shadow bg-white rounded p-8">
+              <span class="mb-4 text-3xl text-[#8B5E35]"><i class="fa-solid fa-snowflake"></i></span>
+                <h2 class="text-[#090F41] text-[22px] font-semibold mb-4">snowflake</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada  dignissim</p>
+
+            </div>
+            <div    data-aos="zoom-in-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="shadow bg-white rounded p-8">
+              <span class="mb-4 text-3xl text-[#8B5E35]"><i class="fa-solid fa-gem"></i></span>
+                <h2 class="text-[#090F41] text-[22px] font-semibold mb-4">Gifting me</h2>
+                <p class="text-[14px] text-[#9D9DAA]">lorem ipsum dolor sit amet consectetur. Estvel risus hendreit laoreet purus malesuada  dignissim</p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+  
+ 
+  
+</section>
